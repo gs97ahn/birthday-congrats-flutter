@@ -2,20 +2,19 @@ import 'package:flutter/material.dart';
 import './splash_screen.dart';
 
 void main() {
-  runApp(const MyApp());
+  runApp(const BirthdayCongratsApp());
 }
 
-class MyApp extends StatelessWidget {
-  const MyApp({Key? key}) : super(key: key);
+class BirthdayCongratsApp extends StatelessWidget {
+  const BirthdayCongratsApp({Key? key}) : super(key: key);
   final String _title = 'Birthday Congrats';
 
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
       title: _title,
-      theme: ThemeData(
-        primarySwatch: Colors.blue,
-      ),
+      theme: ThemeData.dark(),
+      debugShowCheckedModeBanner: false,
       home: const SplashScreen(),
     );
   }
