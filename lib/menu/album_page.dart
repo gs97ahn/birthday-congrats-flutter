@@ -10,18 +10,7 @@ class AlbumPage extends StatefulWidget {
 
 class _AlbumPageState extends State<AlbumPage> {
   final String _title = 'Album';
-  final List<String> _image = [
-    './assets/photo1.jpeg',
-    './assets/photo2.jpeg',
-    './assets/photo3.jpeg',
-    './assets/photo4.png',
-    './assets/photo5.png',
-    './assets/photo6.jpeg',
-    './assets/photo7.jpeg',
-    './assets/photo8.jpeg',
-    './assets/photo9.jpeg',
-    './assets/photo10.jpeg',
-  ];
+  final List<String> _image = List<String>.generate(10, (i) => './assets/photo${i+1}.jpeg');
 
   List<Widget> _items(List itemList) {
     return List<Widget>.generate(itemList.length, (int i) {
