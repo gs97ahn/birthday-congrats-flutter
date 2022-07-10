@@ -15,7 +15,6 @@ class _SplashScreenState extends State<SplashScreen> {
   @override
   void initState() {
     super.initState();
-
     _controller = VideoPlayerController.asset('assets/splash.mp4')
     ..initialize().then((_) {
       setState(() {});
@@ -26,18 +25,15 @@ class _SplashScreenState extends State<SplashScreen> {
 
   void _playVideo() async {
     _controller.play();
-
     Future.delayed(
       const Duration(seconds: 3),
         () {
           Navigator.pushReplacement(context,
               MaterialPageRoute(
-                  builder: (context) => MenuNavigation()
-          ));
+                  builder: (context) => const MenuNavigation()));
         }
     );
   }
-
 
   @override
   void dispose() {
@@ -48,17 +44,13 @@ class _SplashScreenState extends State<SplashScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: const Color.fromARGB(255, 174, 190, 191),
-      body: Center(
-        child: _controller.value.isInitialized
-            ? AspectRatio(
-            aspectRatio: _controller.value.aspectRatio,
-            child: VideoPlayer(
-                _controller
-            )
-        )
-            : Container(),
-      )
-    );
+        backgroundColor: const Color.fromARGB(255, 174, 190, 191),
+        body: Center(
+          child: _controller.value.isInitialized
+              ? AspectRatio(
+              aspectRatio: _controller.value.aspectRatio,
+              child: ClipRRect(
+                borderRadius: BorderRadius.circular(150),
+                child: VideoPlayer(_controller))) : Container()));
   }
 }
