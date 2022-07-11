@@ -4,7 +4,7 @@ import './menu/mailbox_page.dart';
 import './menu/album_page.dart';
 
 class MenuNavigation extends StatefulWidget {
-  MenuNavigation({Key? key}) : super(key: key);
+  const MenuNavigation({Key? key}) : super(key: key);
 
   @override
   _MenuNavigationState createState() => _MenuNavigationState();
@@ -14,6 +14,7 @@ class _MenuNavigationState extends State<MenuNavigation> {
   int selectedIndex = 0;
   late final List<Widget> widgetOptions;
 
+  @override
   void initState() {
     super.initState();
     widgetOptions = <Widget>[
@@ -41,8 +42,7 @@ class _MenuNavigationState extends State<MenuNavigation> {
         ],
         currentIndex: selectedIndex,
         onTap: onItemTapped,
-      ),
-    );
+      ));
   }
 
   void onItemTapped(int index) {
