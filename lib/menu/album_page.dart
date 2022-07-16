@@ -9,11 +9,10 @@ class AlbumPage extends StatefulWidget {
 }
 
 class _AlbumPageState extends State<AlbumPage> {
-  final String _title = 'Album';
-  final List<String> _image = List<String>.generate(10, (i) => './assets/photo${i+1}.jpeg');
+  final List<String> _image = List<String>.generate(12, (i) => './assets/photo${i+1}.jpeg');
 
   List<Widget> _items(List itemList) {
-    return List<Widget>.generate(itemList.length, (int i) {
+    return List<Widget>.generate(itemList.length, (i) {
       return ClipRRect(
         borderRadius: BorderRadius.circular(5),
         child: Image.asset(itemList[i])
@@ -27,8 +26,8 @@ class _AlbumPageState extends State<AlbumPage> {
         backgroundColor: Colors.black,
         appBar: AppBar(
           backgroundColor: const Color.fromARGB(255, 174, 190, 191),
-          title: Text(_title,
-            style: const TextStyle(
+          title: const Text('Album',
+            style: TextStyle(
                 fontWeight: FontWeight.bold,
                 color: Color.fromARGB(255, 1, 97, 112)
             ),
@@ -43,7 +42,7 @@ class _AlbumPageState extends State<AlbumPage> {
                     padding: const EdgeInsets.only(top: 30, bottom: 30),
                     child: CarouselSlider(
                         options: CarouselOptions(
-                            height: 350,
+                            height: 300,
                             enlargeCenterPage: true,
                             enableInfiniteScroll: true,
                             initialPage: 0,

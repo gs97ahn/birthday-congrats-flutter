@@ -46,4 +46,18 @@ app.*.map.json
 /android/app/release
 
 # Assets related
-/assets/
+/assets/photo1.jpeg
+/assets/photo2.jpeg
+/assets/photo3.jpeg
+/assets/photo4.jpeg
+/assets/photo5.jpeg
+/assets/photo6.jpeg
+/assets/photo7.jpeg
+/assets/photo8.jpeg
+/assets/photo9.jpeg
+/assets/photo10.jpeg
+/assets/photo11.jpeg
+/assets/photo12.jpeg
+/assets/profile_kug.jpeg
+/assets/profile_shy.jpeg
+
