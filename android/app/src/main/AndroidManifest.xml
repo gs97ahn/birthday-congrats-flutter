@@ -1,7 +1,7 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.example.birthday_congrats">
    <application
-        android:label="birthday_congrats"
+        android:label="굿한번해봐"
         android:name="${applicationName}"
         android:icon="@mipmap/ic_launcher">
         <activity
