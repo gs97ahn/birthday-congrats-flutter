@@ -5,12 +5,11 @@
 </div>
 
 **Birthday Congrats is a mobile application that congratulate Hyeyoung Shin and Uijin Kang's 
-birthday.**
-
+birthday in 2022. Therefore, as this application is for one time use, many codes are hardcoded.**
 ## Functions
 - Home
 - Photo album
 - Mailbox
-- Gift picker
 
 ## How it Works
+![screen_record_1.gif](./screenshots/screen_record_1.gif)
