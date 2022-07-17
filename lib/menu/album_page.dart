@@ -9,7 +9,7 @@ class AlbumPage extends StatefulWidget {
 }
 
 class _AlbumPageState extends State<AlbumPage> {
-  final List<String> _image = List<String>.generate(12, (i) => './assets/photo${i+1}.jpeg');
+  final List<String> _image = List<String>.generate(25, (i) => './assets/photo${i+1}.jpeg');
 
   List<Widget> _items(List itemList) {
     return List<Widget>.generate(itemList.length, (i) {
@@ -30,9 +30,7 @@ class _AlbumPageState extends State<AlbumPage> {
             style: TextStyle(
                 fontWeight: FontWeight.bold,
                 color: Color.fromARGB(255, 1, 97, 112)
-            ),
-          ),
-        ),
+            ))),
         body: SafeArea(
           child: Center(
             child: Column(
@@ -50,10 +48,6 @@ class _AlbumPageState extends State<AlbumPage> {
                             autoPlayInterval: const Duration(seconds: 5),
                             enlargeStrategy: CenterPageEnlargeStrategy.height),
                         items: _items(_image)))
-              ],
-            ),
-          ),
-        )
-    );
+              ]))));
   }
 }

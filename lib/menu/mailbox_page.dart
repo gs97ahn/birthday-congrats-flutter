@@ -8,12 +8,8 @@ class MailboxPage extends StatefulWidget {
 }
 
 class _LetterPageState extends State<MailboxPage> {
-  final List<String> _toHY = [
-    ''
-  ];
-  final List<String> _toEJ = [
-    ''
-  ];
+  final List<String> _toHY = [''];
+  final List<String> _toEJ = [''];
 
 
   List<Widget> _letter(List letterList) {
@@ -26,9 +22,8 @@ class _LetterPageState extends State<MailboxPage> {
                   padding: const EdgeInsets.all(15),
                   color: Colors.yellow[200],
                   child: Text(letterList[i],
-                      style: TextStyle(color: Colors.grey[700], fontSize: 30))
-              )
-          ));
+                      style: TextStyle(color: Colors.grey[700], fontSize: 30)
+                  ))));
     });
   }
 
@@ -42,17 +37,12 @@ class _LetterPageState extends State<MailboxPage> {
           style: TextStyle(
               fontWeight: FontWeight.bold,
               color: Color.fromARGB(255, 1, 97,112)
-          ),
-        ),
-      ),
+          ))),
       body: SingleChildScrollView(
         child: Center(
           child: Column(
             mainAxisAlignment: MainAxisAlignment.center,
             children: _letter(_toEJ)
-          ),
-        ),
-      )
-    );
+          ))));
   }
 }

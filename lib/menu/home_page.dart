@@ -61,11 +61,11 @@ class _HomePageState extends State<HomePage> {
                 Padding(
                     padding: const EdgeInsets.all(50),
                     child: ClipRRect( borderRadius: BorderRadius.circular(30.0),
-                        child: Image.asset('./assets/profile_kug.jpeg', height: 250, width: 250))),
+                        child: Image.asset('./assets/profile_shy.jpeg', height: 250, width: 250))),
                 const Padding(
                   padding: EdgeInsets.all(15),
                   child: Text('\u{1F386} 생일 축하해! \u{1F386}',
-                      style: TextStyle(fontWeight: FontWeight.bold, fontSize: 30))),
+                      style: TextStyle(fontWeight: FontWeight.bold, fontSize: 30)))
               ])))
     );
   }
